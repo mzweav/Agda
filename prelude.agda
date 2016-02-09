@@ -32,3 +32,7 @@ ap : ∀ {i j}
        → -----------
        f a₀ ≡ f a₁
 ap f refl = refl
+
+
+trans : ∀{i}{A : Set i}{x y z : A} → x ≡ y → y ≡ z → x ≡ z
+trans refl refl = refl

@@ -164,6 +164,6 @@ record CwF {o ℓ e a b : Level}
                 {A   : Ty Γ}
                 (a   : Ter Δ (TApp σ A))
                 → -------------------------------------------------
-                coe (ap (Ter Δ) TAppEq) (tApp (uSubst σ a) q)
-                  ≡[ ap (Ter Δ) (TAppAp (uEq₁ σ a)) ]≡
+                tApp (uSubst σ a) q
+                  ≡[ ap (Ter Δ) (trans TAppEq (TAppAp (uEq₁ σ a))) ]≡
                 a
